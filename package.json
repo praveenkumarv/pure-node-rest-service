@@ -1,0 +1,20 @@
+{
+  "name": "purenoderestservice",
+  "version": "1.0.0",
+  "description": "Pure Node.js REST Service API using GET, POST, PUT, DELETE with SQLite database",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Nodejs",
+    "REST",
+    "API",
+    "SQLite"
+  ],
+  "author": "Praveen Kumar Vishwanatha",
+  "license": "MIT",
+  "dependencies": {
+    "sqlite3": "^3.1.8"
+  }
+}
