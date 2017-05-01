@@ -18,6 +18,18 @@ purenoderestservice uses a open source projects to work properly:
 And of course purenoderestservice itself is open source with a [public repository][https://github.com/praveenkumarv/purenoderestservice]
  on GitHub.
 
+### SQLite table information
+BEGIN TRANSACTION;
+CREATE TABLE `employee` (
+	`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`firstName`	TEXT,
+	`lastName`	INTEGER,
+	`mobile`	INTEGER UNIQUE,
+	`email`	TEXT UNIQUE
+);
+INSERT INTO `employee` VALUES (1,'Foo','Bar',1234567890,'foobar@email.com');
+COMMIT;
+
 ### Installation
 
 Dillinger requires [Node.js](https://nodejs.org/) v4+ to run.
@@ -37,21 +49,9 @@ $ npm install --production
 $ npm run predeploy
 $ NODE_ENV=production node app
 ```
-### SQLite table information
-BEGIN TRANSACTION;
-CREATE TABLE `employee` (
-	`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
-	`firstName`	TEXT,
-	`lastName`	INTEGER,
-	`mobile`	INTEGER UNIQUE,
-	`email`	TEXT UNIQUE
-);
-INSERT INTO `employee` VALUES (1,'Foo','Bar',1234567890,'foobar@email.com');
-COMMIT;
+
 License
 ----
-
 MIT
-
 
 **Free Software, Hell Yeah!**
